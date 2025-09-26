@@ -37,7 +37,7 @@ using namespace std;
 //     return -1;
 // }
 
-//Best approach called "Moore Voting algorithm"
+//Best approach called "Moore Voting algorithm" O(n)
 int maj(vector<int> vec)
 {
     int ele = vec[0];

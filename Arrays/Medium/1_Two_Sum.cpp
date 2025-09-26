@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <map>
 using namespace std;
 
 //Brute force approach
@@ -18,20 +19,36 @@ using namespace std;
 //     return false;
 // }
 
-
-// Better approach (two pointer approach)
+//using map
 bool two_sum(int arr[],int n,int target)
 {
-    sort(arr,arr+n);
-    int i = 0, j = n-1;
-    while(i < j)
+    map<int, int> mpp;
+    for(int i = 0;i<n;i++)
     {
-        if(arr[i] + arr[j] == target) return true;
-        if(arr[i] + arr[j] < target) i++;
-        else if(arr[i] + arr[j] > target) j--;
+        int a = arr[i];
+        int re_t = target - a;
+        if(mpp.find(re_t) != mpp.end())
+        {
+            return true;
+        }
+        mpp[a] = i;
     }
     return false;
 }
+
+// Better approach (two pointer approach) without map
+// bool two_sum(int arr[],int n,int target)
+// {
+//     sort(arr,arr+n);
+//     int i = 0, j = n-1;
+//     while(i < j)
+//     {
+//         if(arr[i] + arr[j] == target) return true;
+//         if(arr[i] + arr[j] < target) i++;
+//         else if(arr[i] + arr[j] > target) j--;
+//     }
+//     return false;
+// }
 
 int main()
 {

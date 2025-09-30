@@ -20,7 +20,7 @@ using namespace std;
 //     return count;
 // }
 
-// we will store every xorr in hashMap and check if xorr ^ target is present in the hashMap.
+// we will store every xorr in hashMap and check if xorr ^ target is present in the hashMap. O(n log n)
 int cou_sub(vector<int> vec, int n, int k)
 {
     unordered_map<int, int> mpp;

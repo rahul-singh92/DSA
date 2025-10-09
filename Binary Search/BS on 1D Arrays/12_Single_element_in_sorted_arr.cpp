@@ -18,7 +18,7 @@ int sin_ele(vector<int> vec, int n)
     int xorr = 0;
     for(int i = 0;i<n;i++)
     {
-        xorr ^= vec[i];
+        xorr ^= vec[i]; 
     }
     return xorr;
 }

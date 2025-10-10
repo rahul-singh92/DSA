@@ -31,7 +31,7 @@ int sin_ele(vector<int> vec, int n)
         else high = mid - 1;
     }
     return -1;
-}
+} 
 
 int main()
 {

@@ -32,7 +32,7 @@ int sin_ele(vector<int> vec, int n)
     }
     return -1;
 } 
-
+ 
 int main()
 {
     int n;

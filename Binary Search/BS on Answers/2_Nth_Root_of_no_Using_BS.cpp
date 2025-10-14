@@ -31,7 +31,7 @@ using namespace std;
 //     }
 //     return -1;
 // }
-
+ 
 //Better using BS: O(log2m * log2n) 
 int func(int mid, int n, int m)
 {

@@ -25,6 +25,7 @@ using namespace std;
 //     }
 // }
 
+//Better case: O(n* log(maxi - min))
 int agg_cow(vector<int> vec, int n, int k)
 {
     sort(vec.begin(), vec.end());

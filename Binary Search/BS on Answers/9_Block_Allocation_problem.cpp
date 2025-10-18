@@ -30,7 +30,7 @@ using namespace std;
 //     }
 //     return -1;
 // }
-
+ 
 // O(log(max - min + 1) * n)
 int bloc_all_pro(vector<int> vec, int n, int m)
 {

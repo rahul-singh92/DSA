@@ -40,7 +40,7 @@ int bloc_all_pro(vector<int> vec, int n, int m)
     while(low <= high)
     {
         int mid = low + (high - low) / 2;
-        int stu = 1;
+        int stu = 1; 
         int stu_page = 0;
         for(int i = 0;i < n;i++)
         {

@@ -4,7 +4,7 @@
 #include <numeric>
 using namespace std;
 
-//Worst: Linear O(n * (igh - low + 1))
+//Worst: Linear O(n * (high - low + 1))
 // int bloc_all_pro(vector<int> vec, int n, int m)
 // {
 //     if(m > n) return -1;

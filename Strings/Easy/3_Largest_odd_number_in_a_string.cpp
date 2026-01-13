@@ -28,7 +28,7 @@ string tuf_way(string s)
     int i;
     for(i = s.size() - 1; i >= 0 ;i--)
     {
-        if((s[i] - '0') % 2 == 1)
+        if((s[i] - '0') % 2 == 1) //s[i] - '0' beacuase it is converted into ascii so 55 - 44(for 0) which convert the number to original number
         {
             index = i;
             break;

@@ -12,7 +12,7 @@ int op_ca(string s)
     
     if(s[i] == '-')
     {
-        sign = 0;
+        sign = -1;
         i++;
     } 
     else if(s[i] == '+') i++;

@@ -9,7 +9,7 @@ bool comparator(pair<int, char> p1, pair<int, char> p2)
     return p1.second < p2.second;
 }
 
-vector<char> op_ca(string s)
+vector<char> op_ca(string s) 
 {
     pair<int, char> freq[26];
 

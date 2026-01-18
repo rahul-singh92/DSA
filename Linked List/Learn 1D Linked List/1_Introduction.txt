@@ -1,0 +1,11 @@
+Not Contiguous
+ 
+Element can be added any time
+
+Next pointer which keep the track or location of the next member
+
+Used in Stack and Queue
+
+In real life used in Browser for changing web pages in forward or backward
+
+created by struct/class

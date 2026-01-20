@@ -24,6 +24,7 @@ bool search_ele(Node* head, int el)
     while(temp)
     {
         if(temp -> data == el) return true;
+        temp = temp -> next;
     }
     return false;
 }
@@ -34,6 +35,6 @@ int main()
     head -> next = new Node(2);
     head -> next -> next = new Node(3);
 
-    bool ans = search_ele(head, 2);
+    bool ans = search_ele(head, 0);
     cout<<ans<<endl;
 }

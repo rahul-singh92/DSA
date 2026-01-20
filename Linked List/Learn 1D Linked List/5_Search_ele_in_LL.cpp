@@ -38,5 +38,3 @@ int main()
     bool ans = search_ele(head, 0);
     cout<<ans<<endl;
 }
-
-hi hello

@@ -1,0 +1,86 @@
+Basic Recursion to print all subsequnce
+
+function(index, arr(to perform funciton), sum(required sum or anything))
+{
+    //Base Case always when to send back the function
+    if(i == n)
+        if(s == sum)
+            print Data Structure (Or do whatever you want to do)
+    return 
+
+    //Call for pick
+    {
+    //add current value (or perform inputs)
+    ds.add(arr[i]);
+    s += arr[i];
+
+    //again recursion for current change with next index
+    funciton(index + 1, arr, sum);
+    
+
+    //remove the value for next possible cases
+    ds.remove(arr[i]);
+    s-= arr[i];
+    }
+
+    //Call for not pick 
+    {
+    //Then call if nor pick
+    function(ind + 1, arr, sum)
+    }
+}
+
+
+
+To print only a single subsequnece 
+
+function(same)
+{
+    //Base Case
+    if(ind == n)
+    {
+        if(s == sum)
+        {
+            print data structure;
+            return ture;
+        }
+        else return false;
+    }
+
+
+    ds.add(arr[i]);
+    s+= arr[i];
+
+    if(function() == true) return true;
+
+    ds.remove(arr[i]);
+    s-=arr[i];
+
+    if(funciton() == ture) return true;
+
+    return false;
+}
+
+
+
+To count all the subsequence
+
+function()
+{
+    base case
+
+    return 1 --> if condition satisfies 
+    return 0 --> if not satisfies
+
+    l = f()
+    r = ()
+
+    return l + r;
+}
+
+or 
+
+s = 0
+for(i to n)
+    s+= f();
+return s;     --> for NQueen

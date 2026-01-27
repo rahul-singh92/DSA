@@ -84,3 +84,25 @@ s = 0
 for(i to n)
     s+= f();
 return s;     --> for NQueen
+
+
+One more case for Recursion where you have to find unique combination with sum k
+
+funciton()
+{
+    //base case
+    if(t == 0) ans push(data structure)
+
+    for(i to n)
+    {
+        if(i > ind && arr[i] == arr[i-1]) continue;
+
+        if(arr[i] > target) break;
+
+        ds.push(arr[i])
+
+        function(ind + 1...)
+
+        ds.pop()
+    }
+}

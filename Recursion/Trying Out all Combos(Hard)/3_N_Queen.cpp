@@ -81,7 +81,7 @@ void solve(int col, vector<string>& board, int n, vector<int>& leftRow, vector<i
     for(int row = 0; row < n; row++)
     {
         if(leftRow[row] == 0 && lowerDiagonal[row + col] == 0 &&
-            upperDiagonal[n - 1 + col - row] == 0)
+            upperDiagonal[(n - 1 )+ (col - row)] == 0)
         {
             //Place the queen
             board[row][col] = 'Q';
@@ -89,7 +89,7 @@ void solve(int col, vector<string>& board, int n, vector<int>& leftRow, vector<i
             //Mark the row and diagonals
             leftRow[row] = 1;
             lowerDiagonal[row + col] = 1;
-            upperDiagonal[n - 1 + col - row] = 1;
+            upperDiagonal[(n - 1) + (col - row)] = 1;
 
             //Recurse the next column
             solve(col + 1, board, n, leftRow, upperDiagonal, lowerDiagonal, ans);
@@ -98,7 +98,7 @@ void solve(int col, vector<string>& board, int n, vector<int>& leftRow, vector<i
             board[row][col] = '.';
             leftRow[row] = 0;
             lowerDiagonal[row + col] = 0;
-            upperDiagonal[n - 1 + col - row] = 0;
+            upperDiagonal[(n - 1) + (col - row)] = 0;
         }
     }
 }

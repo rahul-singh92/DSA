@@ -1,0 +1,47 @@
+How computer store -ve integer?
+    It store the 2's complement of that number 
+what is the minimum value it can store?
+    i.e. -2^31 and it stores 2's complement so number is 1 0 0 0 0 0 00 0.....
+
+AND operator (&) 
+{
+    all true --> true
+    one false --> false
+}
+
+OR ( | )
+{
+    one true --> true
+    all false --> false
+}
+
+XOR ( ^ )
+{
+    no of 1 is odd --> 1
+    no of 1 is even --> 0
+}
+
+Right shift ( >> )
+{
+    x = n >> 1 (it means right sift n by 1 position). //Generally divisible by 2
+
+    OR
+    (x / 2^k)
+}
+
+
+Left Shift ( >> )
+{
+    x = n << 1 (it means left shift n by 1 position). //Genera multiplied by 2
+
+    OR
+    (x * 2^k)
+}
+
+NOT operator ( ~ )
+{
+    ~x 
+    If the number is positive flip the digits then if the flipped digit is negative then store its 2s complement
+
+    if the number is negative find 2s complement and then flip and do the same thing
+}

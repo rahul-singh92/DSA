@@ -50,4 +50,10 @@ NOT operator ( ~ )
 XOR {
     same number XOR is "zero"
     5 ^ 5 = 0
+
+    Swap two number() {
+        a = a ^ b
+        b = a ^ b   // b = a ^ b ^ b so b = a
+        a = a ^ b   // a = a ^ b ^ a  so a = b
+    }
 }

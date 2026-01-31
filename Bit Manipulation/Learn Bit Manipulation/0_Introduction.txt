@@ -45,3 +45,9 @@ NOT operator ( ~ )
 
     if the number is negative find 2s complement and then flip and do the same thing
 }
+
+
+XOR {
+    same number XOR is "zero"
+    5 ^ 5 = 0
+}

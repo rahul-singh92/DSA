@@ -60,4 +60,9 @@ XOR {
     Toggle the ith bit {
         (n ^ (1 << i))
     }
+
+    number of bits to change from A to B {
+        ans = A ^ B; // 1 ^ 0 = 1 where the bits need to be flipped
+        //This answer will be containing 1 where the bits need to be flipped 
+    }
 }

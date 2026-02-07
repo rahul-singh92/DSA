@@ -1,45 +1,62 @@
 #include <iostream>
 using namespace std;
 
-class stImp {
+class ArrayStack
+{
+    private:
+        int* stackArr;
+        int capacity;
+        int topIndex;
+
     public:
-    int top = -1;
-    int st[10];
-
-
-    void push(int x)
-    {
-        if(top < 10)
+        ArrayStack(int size = 1000)
         {
-            top++;
-            st[top] = x;
+            capacity = size;
+            stackArr = new int[capacity];
+            topIndex = -1;
         }
-    }
 
-    int topp()
-    {
-        if(top == -1) return -1;
-        return st[top];
-    }
-
-    void pop()
-    {
-        if(top == -1) cout<<"Cant pop"<<endl;
-        else
+        ~ArrayStack()
         {
-            top--;
+            delete[] stackArr;
         }
-    }
 
-    int size()
-    {
-        return top + 1;
-    }
+        void push(int x)
+        {
+            if(topIndex >= capacity - 1)
+            {
+                cout<<"Stack Overflow\n";
+                return;
+            }
+            stackArr[++topIndex] = x;
+        }
+
+        int pop()
+        {
+            if(topIndex == -1)
+            {
+                cout<<"Stack is Empty\n";
+                return -1;
+            }
+            return stackArr[topIndex--];
+        }
+
+        int top()
+        {
+            if(topIndex == -1) 
+            {
+                cout<<"Stack is empty\n";
+                return -1;
+            }
+            return stackArr[topIndex];
+        }
 };
 
 int main()
 {
-    stImp stt;
-    stt.push(5);
-    cout<<stt.topp()<<endl;
+    ArrayStack stack;
+    stack.push(5);
+    stack.push(10);
+    cout<<stack.pop()<<" ";
+    cout<<endl<<stack.top()<<endl;
 }

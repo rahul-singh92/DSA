@@ -1,0 +1,83 @@
+Infix to postfix {
+    take st, result;
+
+    loop till length {
+        if alpha push in result
+
+        else if ( push in stack
+
+        else if ) {
+            while ! empty and st.top != (
+                reult push st.top
+                st.pop
+            st.pop. --> for ( this removal
+        }
+
+        else {
+            whiel !empty && precedence(current) <= precedence(st.top) {
+                result += st.top
+                st.pop
+            }
+            st.push --> It can push the higher precedence
+            
+        }
+
+    }
+
+    while !emoty {
+        reult += st.top
+        st.pop
+    }
+}
+
+
+Infix to Prefix {
+    1. Reverse the string
+    2. Add ( + s + ) for edge cases
+    3. Loop and use Infix to postfix with some changes\
+    4. reverse the reult string
+
+
+    reverse s
+    loop and chane ( to ) and vice versa
+    s += ( + s + )
+    take st, result
+
+    loop 0 to length {
+        if operand result += ch;
+
+        else if ( 
+            st.push
+        
+        else )
+            while(!empty && st.top != '(') {
+                result += st.top
+                st.pop
+            }
+            st.pop
+
+        else
+        {
+            if ch == '^' {
+                while !empty && precedence(current) <= precedence(st.top) {
+                    result += st.top
+                    st.pop
+                }
+            }
+            else {
+                while !empty && precedence(current) < precedence(st.top) {
+                    result += st.top
+                    st.pop
+                }
+            }
+            st.push ch
+        }
+    }
+
+    while !empty {
+        result += st.top
+        st.pop
+    }
+
+    reverse result;
+}

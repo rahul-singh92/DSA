@@ -78,6 +78,6 @@ void prefixToInfix(string s)
 
 int main()
 {
-    string s = "(p+q)*(m-n)";
+    string s = "(p+q)^(m-n)";
     prefixToInfix(s);
 }

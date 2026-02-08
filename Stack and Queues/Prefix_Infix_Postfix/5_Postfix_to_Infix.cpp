@@ -4,7 +4,6 @@ using namespace std;
 void postfixToInfix(string s)
 {
     stack<string> st;
-    string result;
 
     for(int i = 0; i < s.length(); i++)
     {

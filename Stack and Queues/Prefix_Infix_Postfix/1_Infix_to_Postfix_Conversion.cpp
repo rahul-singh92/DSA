@@ -56,6 +56,6 @@ void infixToPostfix(string s)
 
 int main()
 {
-    string exp = "(p+q)*(m-n)";  
+    string exp = "a+b+c*d";  
     infixToPostfix(exp);
 }

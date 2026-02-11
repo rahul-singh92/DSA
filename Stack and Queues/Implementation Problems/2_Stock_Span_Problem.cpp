@@ -38,8 +38,7 @@ vector<int> findPGE(vector<int>& arr)
             st.pop();
         }
 
-        if(st.empty()) res[i] = -1;
-        else res[i] = st.top();
+        res[i] = st.empty() ? -1 : st.top();
 
         st.push(i);
     }
@@ -57,7 +56,7 @@ vector<int> op_way(vector<int>& arr)
     {
         ans[i] = i - PGE[i];
     }
-    
+
     return ans;
 }
 

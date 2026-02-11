@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//O(n^2)
 void bubble_sort(vector<int>& arr)
 {
     int n = arr.size();

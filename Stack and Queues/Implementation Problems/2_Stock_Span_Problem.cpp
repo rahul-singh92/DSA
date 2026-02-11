@@ -45,6 +45,7 @@ vector<int> findPGE(vector<int>& arr)
     return res;
 }
 
+// o(3*n)
 vector<int> op_way(vector<int>& arr)
 {
     int n = arr.size();

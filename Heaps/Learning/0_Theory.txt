@@ -1,0 +1,85 @@
+Priority Queue:
+    Type of queue where each element is assigned a property, ans instead of processed in order 
+    they are are processed based on Priority.
+    --> If same Priority, then based on insertion order
+
+Binary Heap:
+    It is a binary tree that satisfies below conditions
+    --> It should be a Complete Binary tree
+    --> It should satisfy the heap property
+
+Heap Property:
+    Min Heap: For every node in a binary heap, if the node value is less than its right and 
+              left child’s value then Binary Heap is known as Min Heap. The property of Node’s 
+              value less than its children’s value is known as Min Heap property. In Min Heap, 
+              the root value is always the Minimum value in Heap.
+    Max Heap: For every node in a binary heap, if the node value is greater than its right and 
+              left child’s value then Binary Heap is known as Max Heap. The property of being 
+              Node’s value greater than its children's value is known as Max Heap property. In 
+              Max Heap, the root value is always the maximum value in Heap.
+
+Representation of Binary heap:
+    Represented as Array
+    --> The root value is at arr[0]
+
+    If node at index i, then left child "2*i+1" and right child "2*i+2"
+    if child node it at i, than parend "(i - 1) / 2"
+
+Operation of Min Heap:
+    - Insert(): insert new key in the Binary Heap [O(log N)]
+        Steps:
+            - First insert the new key at the first vacant position from the left on the last
+              last level of the heap. If the the last level is completely filled, then insert
+              the key as the left-most element in next level.
+            - Inserting a new key at the first vacant position in the last level preserves
+              the Complete Binary Tree Property, the Min Heap property may get affected we need
+              to check for it.
+            - If the inserted key present is less than the key, then the Min property is also not violated
+            - If the parent is greater than the inserted key, then swap its values, Now the heap property
+              may get violated at the parent node. So repeat the same process until the heap property is 
+              satisfied.
+            - O(log N)
+    
+    Heapify(): this is used to restore the MinHeap, by fixing violation [O(log N)]
+        Steps:
+            - First find out the Minimum among the Violated Node, left, and right child of 
+              Violated Node.
+            - If the Minimum among them is the left child, then swap the Violated Node value 
+              with the Left child value and recursively call the function on the left Child.
+            - If the Minimum among them is the right child, then swap the Violated Node value 
+              with the right child value and recursively call the function right Child.
+            - Recursive call stops when the heap property is not violated.
+    
+    getMin(): returns the minimum value in the Binary Heap. [O(1)]
+        - root node is the minimum value in min Heap. return a[0];
+    
+    ExtractMin(): Removes the minimum element from the heap. [O(log N)]
+        Steps:
+            - Copy the last Node value to the Root Node, and decrease the size, this means 
+              that the root value is now deleted from the heap, and the size is decreased by 1.
+            - By doing the above step we ensure that the Complete binary tree property is not 
+              violated, as we are copying the last node value to the root node value, the Min 
+              Heap property gets violated.
+            - Call the Heapify function to convert it into a valid heap.
+    
+    DecreaseKey(): Given an index and a value, we need to update the value at the index with 
+                   the given value. We assume that the given value is less than the existing 
+                   value at that index.  [O(log N)]
+        Steps:
+            - Let’s the index be i and the value be new_val. Update existing value at index 
+              i with new_val i.e arr[i] = new_val. 
+            - By performing the above step, the Complete binary tree property is not violated, 
+              but the Min heap property may get violated.
+            - As the new_val we are inserting is less than the previously existing value, the 
+              min-heap property is not violated in subtrees of this rooted tree. 
+            - It may get violated in its ancestors, so as we do in insert operation, check the 
+              value of a current node with its parent node, if it violates the min-heap property
+            Swap the nodes and recursively do the same.
+    
+    Delete(): Given an index, delete the value at that index from the min-heap.  [O(log N)]
+        Steps:
+            - First, update the value at the index that needs to be deleted with INT_MIN.
+            - Now call the Decreasekey() function at the index which is need to be deleted. 
+              As the value at the index is the least, it reaches the top.
+            - Now call the ExtractMin() operation which deletes the root node in Minheap.
+            - In this way, the desired index value is deleted from the Minheap.

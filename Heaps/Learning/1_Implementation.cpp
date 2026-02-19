@@ -30,7 +30,7 @@ class BinaryHeap
         
         int right(int i)
         {
-            return 2+i+2;
+            return 2*i+2;
         }
 
         void Insert(int x)

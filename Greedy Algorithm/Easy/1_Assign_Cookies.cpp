@@ -80,11 +80,32 @@ int op_way(vector<int>& student, vector<int>& cookie)
     return studentIndex;
 }
 
+//or
+
+int op_way2(vector<int>& student, vector<int>& cookie)
+{
+    sort(student.begin(), student.end());
+    sort(cookie.begin(), cookie.end());
+
+    int l = 0, r = 0;
+    int ans = 0;
+    while(l < student.size() && r < cookie.size())
+    {
+        if(student[l] <= cookie[r])
+        {
+            l++;
+            ans++;
+        }
+        r++;
+    }
+    return ans;
+}
+
 int main()
 {
     vector<int> student = {1, 2, 3};
     vector<int> cookie = {1, 1};
 
-    int result = op_way(student, cookie);
+    int result = op_way2(student, cookie);
     cout<<result<<endl;
 }

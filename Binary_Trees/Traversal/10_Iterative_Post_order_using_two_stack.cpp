@@ -9,29 +9,29 @@ struct Node
     Node(int val) : data(val), left(nullptr), right(nullptr) {}
 };
 
-vector<int> inOrder(Node* root)
+vector<int> postOrder(Node* root)
 {
     vector<int> ans;
 
-    stack<Node*> st;
-    Node* node = root;
+    if(root == nullptr) return ans;
 
-    while(true)
+    stack<Node*> st1, st2;
+    st1.push(root);
+
+    while(!st1.empty())
     {
-        if(node != nullptr)
-        {
-            st.push(node);
-            node = node -> left;
-        }
-        else
-        {
-            if(st.empty()) break;
+        root = st1.top();
+        st1.pop();
 
-            node = st.top();
-            st.pop();
-            ans.push_back(node -> data);
-            node = node -> right;
-        }
+        st2.push(root);
+
+        if(root -> left != nullptr) st1.push(root -> left);
+        if(root -> right != nullptr) st1.push(root -> right);
+    }
+    while(!st2.empty())
+    {
+        ans.push_back(st2.top() -> data);
+        st2.pop();
     }
     return ans;
 }
@@ -44,7 +44,7 @@ int main()
     root->left->left = new Node(4);
     root->left->right = new Node(5);
 
-    vector<int> result = inOrder(root);
+    vector<int> result = postOrder(root);
 
     for(int val : result) 
     {

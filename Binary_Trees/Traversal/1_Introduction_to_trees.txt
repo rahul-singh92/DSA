@@ -1,0 +1,12 @@
+Binary Tree: It is a type of tree where you have at most 2 children for each node
+
+Type Of Binary Tree:
+    -> Full Binary Tree: each node has either 0 or 2 chhildren
+
+    -> Complete Binary Tree: All level are completely filled except the last level where las level nodes should be as left as possible
+
+    -> Perfect Binary Tree: All level are completely filled except leaf.
+    
+    -> Balanced Binary Tree: Height of tree is log2(n)
+
+Degenerate Tree: it is a tree having single child so that means it is a linked list

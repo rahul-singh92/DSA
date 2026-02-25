@@ -1,0 +1,18 @@
+struct{
+    int data;
+    struct* left;
+    struct* right;
+}
+
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+
+    Node(int val)
+    {
+        data = val;
+        left = right = null;
+    }
+}
+

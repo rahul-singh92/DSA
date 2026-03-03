@@ -1,0 +1,2 @@
+IN BST 
+    Left_Node <= Root <= Right_Node

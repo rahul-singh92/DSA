@@ -36,7 +36,7 @@ int main()
     Node* root = new Node(3);
     root -> left = new Node(1);
     root -> right = new Node(2);
-    root -> right = new Node(4);
+    root -> right -> right = new Node(4);
 
     vector<int> bst;
     // bru_way(root, bst);

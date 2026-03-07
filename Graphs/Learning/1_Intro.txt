@@ -1,0 +1,22 @@
+Graph:
+    Two Types:
+        Directed
+        Undirected
+    
+    All tree are graph
+
+
+cyclic graph if it has cycle
+acyclic is no cycle
+
+Path: a path where each node come only once and is reachable
+
+Degree: number of edges connected to a node
+
+Total degree of a graph = 2*E where E is number of edges for Undirected
+
+For directed:
+    Indegree: number of edges coming in
+    OutDegree: number of edge going outside
+
+    

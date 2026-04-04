@@ -1,3 +1,6 @@
+// Only works for directed graph
+// What if undirected, then convert it into directed
+
 #include <iostream>
 using namespace std;
 

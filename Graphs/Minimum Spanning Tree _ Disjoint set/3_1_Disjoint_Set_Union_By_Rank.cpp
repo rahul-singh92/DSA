@@ -10,6 +10,13 @@
 
 // Ultimate Parent: refers to the topmost node or root node
 
+
+// It uses Path Compression Technique
+// Path compression: think of like if you want to find parent of a node then before we have to go 
+// to each node and see if its parent then that nodes parent etc
+// In this we will direcltly update the parent array while Union so that we always know the parent
+
+
 #include <iostream>
 using namespace std;
 

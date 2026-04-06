@@ -35,7 +35,7 @@ int op_way(int V, vector<vector<vector<int>>>& adj)
 int main()
 {
     int V = 5;
-    vector<vector<int>> edges = {{0, 1, 2}, {0, 2, 1}, {1, 2, 1}, {2, 3, 2}, {3, 4, 1}, {4, 2, 2}};
+    vector<vector<int>> edges = {{0, 1, 2}, {0, 3, 6}, {1, 2, 3}, {1, 3, 8}, {1, 4, 5}, {4, 2, 7}};
     vector<vector<vector<int>>> adj(V);
 
     for(auto it: edges)

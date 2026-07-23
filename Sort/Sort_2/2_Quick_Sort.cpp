@@ -4,21 +4,24 @@ using namespace std;
 // O(n*log n)
 int partition(vector<int>& arr, int low, int high)
 {
-    int pivot = arr[high];
-
-    int i = low - 1;
-    for(int j = low; j < high; j++)
+    int pivot = arr[low];
+    int i = low, j = high;
+    
+    while(i < j)
     {
-        if(arr[j] < pivot)
+        while(arr[i] <= pivot && i <= high - 1)
         {
             i++;
-            swap(arr[i], arr[j]);
         }
+
+        while(arr[j] >= pivot && j >= low + 1)
+        {
+            j--;
+        }
+        if(i < j) swap(arr[i], arr[j]);
     }
-
-    swap(arr[i+1], arr[high]);
-
-    return i + 1;
+    swap(arr[low], arr[j]);
+    return j;
 }
 
 void quickSort(vector<int>& arr, int low, int high)

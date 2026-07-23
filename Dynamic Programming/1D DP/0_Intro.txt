@@ -1,0 +1,9 @@
+How to solve these types:
+    If question says count or best way or all possible way
+
+Trick:
+    1. Try to represent the problem in terms of index
+    2. do all possible stuff on that index according to that problem
+    3. if question says, count all ways -> sum of all steps
+    4. if question says, min of all ways
+    5. similary maximum

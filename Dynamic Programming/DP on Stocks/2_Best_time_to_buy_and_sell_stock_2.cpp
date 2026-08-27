@@ -55,18 +55,18 @@ int tabu_way(vector<int>& arr)
     {
         for(int buy = 0; buy <= 1; buy++)
         {
-            if(buy == 0)
+            if(buy)
             {
-                profit = max(dp[ind + 1][0], -arr[ind] + dp[ind + 1][1]);
+                profit = max(-arr[ind] + dp[ind+1][0], dp[ind+1][1]);
             }
-            if(buy == 1)
+            else
             {
-                profit = max(dp[ind + 1][1], arr[ind] + dp[ind + 1][0]);
+                profit = max(arr[ind] + dp[ind + 1][1], dp[ind+1][0]);
             }
             dp[ind][buy] = profit;
         }
     }
-    return dp[0][0];
+    return dp[0][1];
 }
 
 int opWay(vector<int>& arr)
@@ -102,7 +102,7 @@ int main()
 
     // int ans = rec_way(arr, 1, 0);
     // int ans = memo_way(arr);
-    // int ans = tabu_way(arr);
-    int ans = opWay(arr);
+    int ans = tabu_way(arr);
+    // int ans = opWay(arr);
     cout<<ans<<endl;
 }

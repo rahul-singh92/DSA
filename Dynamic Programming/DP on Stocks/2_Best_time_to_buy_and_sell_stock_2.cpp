@@ -85,7 +85,7 @@ int opWay(vector<int>& arr)
             {
                 profit = max(ahead[0], -arr[ind] + ahead[1]);
             }
-            if(buy == 1)
+            else
             {
                 profit = max(ahead[1], arr[ind] + ahead[0]);
             }

@@ -1,3 +1,5 @@
+// The buy and sell stock 3 and 4 are same like in 3 its cap = 2 whereas in 4 there is k capacity.
+
 #include <iostream>
 using namespace std;
 
